@@ -428,13 +428,65 @@ article .icon {
   scrollbar-width: thin;
   scrollbar-color: #a8c8f0 #f1f3f4;
 }
-.timeline:active { cursor: grabbing; }
-.timeline-controls { position:absolute; top:0.5rem; right:1rem; display:flex; gap:0.5rem; z-index:5; }
-.tl-nav { background:#e3f2fd; border:1px solid #90caf9; color:#1565c0; width:2.2rem; height:2.2rem; border-radius:50%; font-size:0.9rem; font-weight:600; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .3s, transform .3s, box-shadow .3s; box-shadow:0 4px 12px rgba(144,202,249,.35); }
-.tl-nav:hover { background:#bbdefb; transform:translateY(-2px); }
-.tl-nav:active { transform:scale(.9); }
-.swipe-hint { position:absolute; bottom:-0.4rem; right:1rem; font-size:0.7rem; color:#1976d2; background:rgba(227,242,253,.9); padding:.35rem .7rem; border-radius:1rem; backdrop-filter:blur(4px); animation:pulseHint 3s infinite; pointer-events:none; box-shadow:0 4px 12px rgba(144,202,249,.25); }
-@keyframes pulseHint { 0%,100% { opacity:.55; transform:translateX(0);} 50% { opacity:1; transform:translateX(-8px);} }
+.timeline:active {
+  cursor: grabbing;
+}
+.timeline-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 5;
+}
+.tl-nav {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #1565c0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(144, 202, 249, 0.35);
+}
+.tl-nav:hover {
+  background: #bbdefb;
+  transform: translateY(-2px);
+}
+.tl-nav:active {
+  transform: scale(0.9);
+}
+.swipe-hint {
+  position: absolute;
+  bottom: -0.4rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  color: #1976d2;
+  background: rgba(227, 242, 253, 0.9);
+  padding: 0.35rem 0.7rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  animation: pulseHint 3s infinite;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(144, 202, 249, 0.25);
+}
+@keyframes pulseHint {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+}
 
 .timeline::-webkit-scrollbar {
   height: 8px;
@@ -459,10 +511,28 @@ article .icon {
   flex: 0 0 calc(66.67% - 1rem);
   scroll-snap-align: start;
   position: relative;
-  opacity:0; transform:translateY(25px) scale(.97); animation:fadeInCard .8s forwards;
+  opacity: 0;
+  transform: translateY(25px) scale(0.97);
+  animation: fadeInCard 0.8s forwards;
 }
-.timeline-item:nth-child(1){animation-delay:.05s;} .timeline-item:nth-child(2){animation-delay:.12s;} .timeline-item:nth-child(3){animation-delay:.19s;} .timeline-item:nth-child(4){animation-delay:.26s;}
-@keyframes fadeInCard { to { opacity:1; transform:translateY(0) scale(1);} }
+.timeline-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.timeline-item:nth-child(3) {
+  animation-delay: 0.19s;
+}
+.timeline-item:nth-child(4) {
+  animation-delay: 0.26s;
+}
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
 .timeline-content {
   height: 100%;
@@ -482,7 +552,13 @@ article .icon {
   flex-direction: column;
   border-top: 4px solid #90caf9;
 }
-.timeline-card::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 85% 15%, rgba(144,202,249,0.18), transparent 60%); pointer-events:none; }
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(144, 202, 249, 0.18), transparent 60%);
+  pointer-events: none;
+}
 
 .timeline-card:hover {
   transform: translateY(-8px);
@@ -567,7 +643,9 @@ article .icon {
   font-size: 1.2rem;
   top: 0;
 }
-.timeline-marker { display:none; }
+.timeline-marker {
+  display: none;
+}
 
 /* Current job highlighting */
 .timeline-card.current-job {
@@ -602,12 +680,12 @@ article .icon {
 
 .timeline-container::before {
   left: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .timeline-container::after {
   right: 0;
-  background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .timeline-container {
