@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kingslyDev</title>
+    <link rel="icon" type="image/png" href="assets/img/logoicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Ghaly Abrar</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ghaly Abrar</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assets/img/PP.png" alt="GhalyAp" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ghaly Abrarian</h1>
+        <p class="section__text__p2">Web Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="location.href='mailto:ghalyabrarianputra@gmail.com'">Contact</button>
+        </div>
+        <div id="socials-container">
+          <img src="assets/img/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ghaly-abrarian-putra-a9b1021b4/'" />
+          <img src="assets/img/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/kingslyDev'" />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="batas">
+          <hr />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="assets/img/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>2± years <br />Software Engineer</p>
+            </div>
+            <div class="details-container">
+              <img src="assets/img/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>Informatics Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As a Informatics Engineering student at Electronic Engineering Polytechnic Institute of Surabaya , I'm interested in web development and the field of data center operations., So I'm seeking new experiences and challenges to
+              enhance my educational background and skills in this field.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="assets/img/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="timeline-container">
+        <div class="timeline-controls">
+          <button class="tl-nav tl-prev" aria-label="Previous" onclick="scrollTimeline(-1)">◀</button>
+          <button class="tl-nav tl-next" aria-label="Next" onclick="scrollTimeline(1)">▶</button>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-marker current"></div>
+              <div class="timeline-card current-job">
+                <h3 class="timeline-title">Fullstack Engineer</h3>
+                <h4 class="timeline-company">PT. Pertamina Patra Niaga (Internship & Freelance)</h4>
+                <p class="timeline-period">July 2025 - Aug 2025</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">ASP.NET Core</span>
+                  <span class="tech-tag">Entity Framework</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+                <ul class="timeline-achievements">
+                  <li>Configured ASP.NET Core application for modular MVC architecture and secure API endpoints.</li>
+                  <li>Used Entity Framework Core for database migrations and data seeding, ensuring consistent schema management.</li>
+                  <li>Implemented client-side pagination and dynamic filtering for responsive data tables.</li>
+                  <li>Managed static assets and versioned CSS/JS with ASP.NET Core static file middleware.</li>
+                  <li>Automated build and deployment using dotnet CLI and Docker for consistent environment parity.</li>
+                  <li>Utilized launchSettings.json and environment variables to separate development and production configurations.</li>
+                  <li>Integrated Bootstrap and FontAwesome via CDN for modern UI and icon support.</li>
+                  <li>Applied custom error handling and logging through appsettings and middleware for better observability.</li>
+                  <li>Enabled code quality and maintainability with clear separation of controllers, services, DTOs, and models.</li>
+                  <li>Used appsettings and environment-based configuration for secure and flexible deployment.</li>
+                  <li>Supported containerization and cloud deployment with Dockerfile and environment-specific settings.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-marker devops"></div>
+              <div class="timeline-card devops-job">
+                <h3 class="timeline-title">DevOps Engineer</h3>
+                <h4 class="timeline-company">PT. Sineas Kreatif Indonesia (Remote)</h4>
+                <p class="timeline-period">Feb 2025 - May 2025</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">HAProxy</span>
+                  <span class="tech-tag">NGINX</span>
+                  <span class="tech-tag">Jenkins</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">SonarQube</span>
+                </div>
+                <ul class="timeline-achievements">
+                  <li>Configured HAProxy to distribute traffic across multiple servers for better app stability.</li>
+                  <li>Used NGINX to route traffic to internal servers, improving security and performance.</li>
+                  <li>Automated VM management on Hostinger with Jenkins in the development pipeline.</li>
+                  <li>Automated build, testing, and deployment using Jenkinsfile and Docker Hub.</li>
+                  <li>Set up Watchtower to automatically update container images with the latest versions.</li>
+                  <li>Created a staging environment and used SonarQube for code quality checks.</li>
+                  <li>Used Portainer.io for easy management and monitoring of Docker containers</li>
+                  <li>NGINX Proxy Manager for handling SSL and reverse proxy configurations.</li>
+                  <li>Implemented Trivy for scanning and identifying security vulnerabilities in Docker images.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-marker backend"></div>
+              <div class="timeline-card backend-job">
+                <h3 class="timeline-title">Backend Developer</h3>
+                <h4 class="timeline-company">Nusajar.id</h4>
+                <p class="timeline-period">July 2024 - Feb 2025</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Golang</span>
+                  <span class="tech-tag">Gin</span>
+                  <span class="tech-tag">RabbitMQ</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">AWS S3</span>
+                </div>
+                <ul class="timeline-achievements">
+                  <li>Initiated and led brainstorming sessions with co-founders and high school students to validate user needs and shape the platform's core features.</li>
+                  <li>Developed backend applications using Golang Gin with microservices architecture</li>
+                  <li>Developed IRT services and configure with RabbitMQ for message broker</li>
+                  <li>Deployed projects on VPS Server with responsibilities including SSL configuration, nginx setup, and ModSecurity integration</li>
+                  <li>Utilized Docker for containerization and GitHub Workflow for automation to streamline development and deployment processes.</li>
+                  <li>Set up Amazon Web Services (S3) as storage for application assets</li>
+                  <li>Ensured application functionality by managing deployment processes and utilizing Linux Ubuntu's Nano Editor for coding tasks.</li>
+                  <li>Acted as the DevOps Lead, overseeing all aspects of deployment and infrastructure management.</li>
+                  <li>Managed infrastructure using DigitalOcean Vps Servers for scalable and reliable Hosting</li>
+                  <li>The platform in utilized by over 5,000 users, with 500 to 2,000 active users daily</li>
+                  <li>Improved operational efficiency by streamlining backend services and data management processes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-marker fullstack"></div>
+              <div class="timeline-card fullstack-job">
+                <h3 class="timeline-title">Fullstack Web Developer</h3>
+                <h4 class="timeline-company">PT. Wesclic Indonesia Neotech (Internship)</h4>
+                <p class="timeline-period">May 2024 - July 2024</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">GitLab</span>
+                  <span class="tech-tag">GitHub</span>
+                </div>
+                <ul class="timeline-achievements">
+                  <li>Created websites using WordPress and collaborated with teams to build client website with Laravel 11/9</li>
+                  <li>Used tools such as GitLab, GitHub, Microsoft Teams, And Asana for seamless communication and project management.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swipe-hint">Swipe / Drag →</div>
+        </div>
+      </div>
+      <img src="assets/img/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#portfolio'" />
+    </section>
+    <section id="portfolio">
+      <p class="section__text__p1">View My</p>
+      <h1 class="title">Portfolio</h1>
+      <div class="portfolio-container">
+        <iframe
+          class="Porto aspect-w-16 aspect-h-9 rounded-2xl border border-black"
+          src="assets/file/present.pdf"
+          title="Portofolio Ghaly"
+          alt="Portofolio Ghaly"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+        ></iframe>
+      </div>
+      <img src="assets/img/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="assets/img/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:ghalyabrarianputra@gmail.com@gmail.com">ghalyabrarianputra@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="assets/img/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/ghalyabrar">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>
+        Copyright &#169; 2024 Ghaly Abrarian P. <br />
+        All Rights Reserved.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
